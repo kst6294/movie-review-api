@@ -13,6 +13,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #Local Apps
+    'api.user',
+    'api.movie',
 
     #Third Apps
     'corsheaders',
