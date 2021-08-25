@@ -13,10 +13,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #Local Apps
+    'api.user',
+    'api.movie',
 
     #Third Apps
     'corsheaders',
     'rest_framework',
+    'rest_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -105,3 +108,8 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with'
 )
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES' : ('rest_framework_simplejwt.authentication.JWTAuthentication',), 
+}
+
+AUTH_USER_MODEL = 'user.User'
