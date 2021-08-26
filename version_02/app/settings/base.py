@@ -107,3 +107,4 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with'
 )
 
+AUTH_USER_MODEL = 'user.User'
